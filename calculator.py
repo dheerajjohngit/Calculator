@@ -3,17 +3,20 @@ class calc:
         return a+b
     def sub(self,a,b):
         return a-b
+    def mul(self,a,b):
+        return a*b
 
 cal=calc()
 
 while True:
     print("1.Addition")
     print("2.Subtraction")
-    print("3.Exit")
+    print("3.Multiplication")
+    print("4.Exit")
 
-    choice=input("Enter your choice(1-3): ")
+    choice=input("Enter your choice(1-4): ")
     
-    if choice=="3":
+    if choice=="4":
         print("Exiting,Thankyou!")
         break
     a=int(input("Enter the number:"))
@@ -22,6 +25,8 @@ while True:
     if choice=="2":
         print("Result: ",cal.sub(a,b))
     elif choice=="1":
-        print("Result: ",cal.add(a,b))    
+        print("Result: ",cal.add(a,b))
+    elif choice=="3":
+        print("Result: ",cal.mul(a,b))
     else:
         print("Error!!!!")
