@@ -5,6 +5,8 @@ class calc:
         return a-b
     def mul(self,a,b):
         return a*b
+    def div(self,a,b):
+        return a/b
 
 cal=calc()
 
@@ -12,11 +14,12 @@ while True:
     print("1.Addition")
     print("2.Subtraction")
     print("3.Multiplication")
-    print("4.Exit")
+    print("4.Division")
+    print("5.Exit")
 
-    choice=input("Enter your choice(1-4): ")
+    choice=input("Enter your choice(1-5): ")
     
-    if choice=="4":
+    if choice=="5":
         print("Exiting,Thankyou!")
         break
     a=int(input("Enter the number:"))
@@ -28,5 +31,8 @@ while True:
         print("Result: ",cal.add(a,b))
     elif choice=="3":
         print("Result: ",cal.mul(a,b))
+    elif choice=="4":
+        print("Result: ",cal.div(a,b))
+
     else:
         print("Error!!!!")
